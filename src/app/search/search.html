@@ -1,0 +1,29 @@
+<h1>Need Music?</h1>
+<p class="lead">Use Youtube PlayList app to search music</p>
+<form>
+    <div class="form-group">
+        <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" class="form-control" placeholder="search music...">
+    </div>
+</form>
+
+<div *ngIf="searchRes">
+    <div *ngFor="let res of searchRes">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="search-res well">
+                    <div class="well well-sm media">
+                        <a target="_blank" routerLink="/search/video/{{res.id.videoId || res.id.playlistId}}">
+                            <img alt="{{res.snippet.title}}" src="{{res.snippet.thumbnails.default.url}}" width="120" height="90">
+                        </a>
+                        <div class="media-body">
+                            <a target="_blank" routerLink="/search/video/{{res.id.videoId || res.id.playlistId}}"> {{res.snippet.title}}</a>
+                            <p> By <a target="_blank" routerLink="/search/video/{{res.snippet.channelId}}"><span class="label label-info"> {{res.snippet.channelTitle}} </span></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

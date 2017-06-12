@@ -1,0 +1,15 @@
+<h1>The most popular videos</h1>
+<p class="lead">The most popular videos in the last days</p>
+<div  *ngIf="seRes">
+    <div *ngFor="let res of seRes">
+        <div class="well well-sm media">
+            <a target="_blank" routerLink="/search/video/{{res.id}}">
+                <img alt="{{res.snippet.title}}" src="{{res.snippet.thumbnails.default.url}}" width="120" height="90">
+            </a>
+            <div class="media-body">
+                <a target="_blank" routerLink="/search/video/{{res.id}}"> {{res.snippet.title}}</a>
+                <p> By <a target="_blank" routerLink="/search/video/{{res.snippet.channelId}}"><span class="label label-info"> {{res.snippet.channelTitle}} </span></a></p>
+            </div>
+        </div>
+    </div>
+</div>

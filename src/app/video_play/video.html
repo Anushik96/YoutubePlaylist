@@ -1,0 +1,7 @@
+<div *ngIf="searchRes">
+    <div *ngFor="let res of searchRes">
+        <h4>{{res.snippet.title}}</h4>
+        <h4>{{res.snippet.channelTitle}}</h4>
+        <iframe width="560" height="315" [src]="sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + res.id.videoId || res.id.playlistId)" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
