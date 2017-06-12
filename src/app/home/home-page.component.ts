@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../services/spotify.service'
-import { Artist } from '../../Artist';
+import { Video } from '../../Video';
 
 @Component({
     selector: 'home',
@@ -10,7 +10,7 @@ import { Artist } from '../../Artist';
 })
 export class HomeComponent implements OnInit{
     id: string;
-    seRes: Artist[];
+    seRes: Video[];
     searchStr: string;
 
     constructor(private _spotifyService:SpotifyService){

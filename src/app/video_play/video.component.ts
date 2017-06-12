@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DomSanitizer} from '@angular/platform-browser';
 import { SpotifyService } from '../services/spotify.service';
-import { Artist } from '../../Artist'
+import { Video } from '../../Video'
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VideoComponent implements OnInit{
     searchStr: string;
-    searchRes: Artist[];
+    searchRes: Video[];
     sanitizer:any;
     baseUrl:string = 'https://www.youtube.com/embed/';
     constructor(private _sanitizer: DomSanitizer, private _spotifyService:SpotifyService, private _router: ActivatedRoute) {

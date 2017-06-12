@@ -5,4 +5,4 @@ var Artist = (function () {
     return Artist;
 }());
 exports.Artist = Artist;
-//# sourceMappingURL=Artist.js.map
+//# sourceMappingURL=Video.js.map
