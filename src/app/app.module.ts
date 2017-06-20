@@ -1,10 +1,9 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { provideRoutes, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import {  HttpModule } from '@angular/http';
-//noinspection TypeScriptCheckImport
-//import {disableDeprecatedForms, provideForms} from '@angular/forms';
+
 import { AppComponent }  from './app.component';
 import { NavbarComponent } from'./navbar/navbar.component';
 import { SearchComponent } from'./search/search.component';
@@ -12,7 +11,9 @@ import { AboutComponent } from'./about/about.component';
 import { SpotifyService } from'./services/spotify.service';
 import { VideoComponent } from'./video_play/video.component';
 import { HomeComponent } from'./home/home-page.component';
-//import { HTTP_PROVIDERS } from'@angular/http'
+import { LoginComponent } from'./login/login.component';
+import { RegisterComponent } from'./register/register.component';
+
 
 @NgModule({
     imports: [BrowserModule,
@@ -20,7 +21,7 @@ import { HomeComponent } from'./home/home-page.component';
         HttpModule,
         RouterModule.forRoot([
             {
-                path: '',
+                path: 'home',
                 component: HomeComponent
             },
             {
@@ -35,19 +36,26 @@ import { HomeComponent } from'./home/home-page.component';
                 path: 'search/video/:id',
                 component: VideoComponent
             },
+            {
+                path: '',
+                component: LoginComponent
+            },
+            {
+                path: 'register',
+                component: RegisterComponent
+            }
         ])
     ],
     declarations: [AppComponent,
         NavbarComponent,
         AboutComponent,
         SearchComponent,
-
+        LoginComponent,
         VideoComponent,
-        HomeComponent
+        HomeComponent,
+        RegisterComponent
     ],
-    bootstrap: [AppComponent,
-        //disableDeprecatedForms(), provideForms()
-    ],
+    bootstrap: [AppComponent],
     providers:[SpotifyService]
 })
 export class AppModule {

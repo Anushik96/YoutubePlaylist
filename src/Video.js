@@ -1,8 +1,8 @@
 "use strict";
-var Artist = (function () {
-    function Artist() {
+var Video = (function () {
+    function Video() {
     }
-    return Artist;
+    return Video;
 }());
-exports.Artist = Artist;
+exports.Video = Video;
 //# sourceMappingURL=Video.js.map

@@ -1,29 +1,27 @@
-.main{
-    border-bottom: #333 solid 1px;
-    padding: 30px 0;
+body {
+    background: url('../images/playlist.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-.artist-header{
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: solid 1px #333;
+
+.panel-default {
+    opacity: 0.9;
+    margin-top:30px;
 }
-.artist-thumb{
-    width: 80px;
-    height: auto;
-    float: left;
-    margin-right: 10px;
+.form-group.last {
+    margin-bottom:0px;
 }
-.artist-albums .well{
-    margin-bottom: 20px;
-    overflow: auto;
-    min-height: 400px;
+*[role="form"] {
+    max-width: 530px;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 0.3em;
 }
-.album{
-    text-align: center;
-    background: #333;
-    padding: 10px 20px;
-    border:#666 1px solid ;
-}
-.album-thumb{
-    width: 100%;
+
+*[role="form"] h2 {
+    margin-left: 5em;
+    margin-bottom: 1em;
 }

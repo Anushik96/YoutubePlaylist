@@ -13,8 +13,6 @@ var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
-//noinspection TypeScriptCheckImport
-//import {disableDeprecatedForms, provideForms} from '@angular/forms';
 var app_component_1 = require('./app.component');
 var navbar_component_1 = require('./navbar/navbar.component');
 var search_component_1 = require('./search/search.component');
@@ -22,7 +20,8 @@ var about_component_1 = require('./about/about.component');
 var spotify_service_1 = require('./services/spotify.service');
 var video_component_1 = require('./video_play/video.component');
 var home_page_component_1 = require('./home/home-page.component');
-//import { HTTP_PROVIDERS } from'@angular/http'
+var login_component_1 = require('./login/login.component');
+var register_component_1 = require('./register/register.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -33,7 +32,7 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 router_1.RouterModule.forRoot([
                     {
-                        path: '',
+                        path: 'home',
                         component: home_page_component_1.HomeComponent
                     },
                     {
@@ -48,17 +47,26 @@ var AppModule = (function () {
                         path: 'search/video/:id',
                         component: video_component_1.VideoComponent
                     },
+                    {
+                        path: '',
+                        component: login_component_1.LoginComponent
+                    },
+                    {
+                        path: 'register',
+                        component: register_component_1.RegisterComponent
+                    }
                 ])
             ],
             declarations: [app_component_1.AppComponent,
                 navbar_component_1.NavbarComponent,
                 about_component_1.AboutComponent,
                 search_component_1.SearchComponent,
+                login_component_1.LoginComponent,
                 video_component_1.VideoComponent,
-                home_page_component_1.HomeComponent
+                home_page_component_1.HomeComponent,
+                register_component_1.RegisterComponent
             ],
-            bootstrap: [app_component_1.AppComponent,
-            ],
+            bootstrap: [app_component_1.AppComponent],
             providers: [spotify_service_1.SpotifyService]
         }), 
         __metadata('design:paramtypes', [])
