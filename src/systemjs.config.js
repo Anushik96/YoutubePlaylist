@@ -22,9 +22,9 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-      'ng2-translate': 'ng2-translate/index.js',
+      'ng2-translate': 'node_modules/ng2-translate/bundles/ng2-translate.umd.js',
       // other libraries
-      rxjs: 'node_modules/rxjs', // added this map section
+      'rxjs': 'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
@@ -35,9 +35,8 @@
       rxjs: {
         defaultExtension: 'js'
       },
-      "/ng2-translate": {
-        "defaultExtension": "js"
-      }
+      'ng2-translate' :{
+         defaultExtension: 'js' },
     }
   });
 })(this);

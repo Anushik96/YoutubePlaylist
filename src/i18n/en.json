@@ -1,0 +1,20 @@
+{
+  "TITLE":"Youtube PlayList",
+  "MENU":{
+    "HOME":"Home",
+    "SEARCH":"Search",
+    "ABOUT":"About",
+    "LOGIN":"Login"
+  },
+  "ABOUT":{
+    "TITLE":"About"
+  },
+  "SEARCH":{
+    "TITLE":"Need Music?",
+    "DESCRIPTION":"Use Youtube PlayList app to search music"
+  },
+  "HOME":{
+    "TITLE": "The most popular videos",
+    "DESCRIPTION":"The most popular videos in the last days"
+  }
+}

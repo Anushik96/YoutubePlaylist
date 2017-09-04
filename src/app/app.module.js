@@ -13,6 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var forms_1 = require('@angular/forms');
 var http_1 = require('@angular/http');
+var ng2_translate_1 = require("ng2-translate");
 var app_component_1 = require('./app.component');
 var navbar_component_1 = require('./navbar/navbar.component');
 var search_component_1 = require('./search/search.component');
@@ -30,6 +31,7 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
+                ng2_translate_1.TranslateModule.forRoot(),
                 router_1.RouterModule.forRoot([
                     {
                         path: 'home',

@@ -1,0 +1,20 @@
+{
+  "TITLE":"PlayList Youtube",
+  "MENU":{
+    "HOME":"Maison",
+    "SEARCH":"Chercher",
+    "ABOUT":"Sur",
+    "LOGIN":"S'identifier"
+  },
+  "ABOUT":{
+    "TITLE":"Sur"
+  },
+  "SEARCH":{
+    "TITLE":"Besoin de musique?",
+    "DESCRIPTION":"Utilisez l'application PlayList de Youtube pour rechercher de la musique"
+  },
+  "HOME":{
+    "TITLE": "Les vidéos les plus populaires",
+    "DESCRIPTION":"Les vidéos les plus populaires des derniers jours"
+  }
+}

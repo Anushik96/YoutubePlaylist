@@ -1,5 +1,5 @@
-<h1>Need Music?</h1>
-<p class="lead">Use Youtube PlayList app to search music</p>
+<h1>{{ 'SEARCH.TITLE' | translate }}</h1>
+<p class="lead">{{ 'SEARCH.DESCRIPTION' | translate }}</p>
 <form>
     <div class="form-group">
         <input type="text" name="searchStr" [(ngModel)]="searchStr" (keyup)="searchMusic()" class="form-control" placeholder="search music...">

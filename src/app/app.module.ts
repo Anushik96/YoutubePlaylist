@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import {  HttpModule } from '@angular/http';
+import {TranslateModule} from "ng2-translate";
 
 import { AppComponent }  from './app.component';
 import { NavbarComponent } from'./navbar/navbar.component';
@@ -19,6 +20,7 @@ import { RegisterComponent } from'./register/register.component';
     imports: [BrowserModule,
         FormsModule,
         HttpModule,
+        TranslateModule.forRoot(),
         RouterModule.forRoot([
             {
                 path: 'home',

@@ -9,15 +9,21 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var ng2_translate_1 = require('ng2-translate');
 var NavbarComponent = (function () {
-    function NavbarComponent() {
+    function NavbarComponent(translate) {
+        this.translate = translate;
+        translate.addLangs(["en", "fr"]);
+        translate.setDefaultLang('en');
+        var browserLang = translate.getBrowserLang();
+        translate.use(browserLang.match(/en|ru/) ? browserLang : 'en');
     }
     NavbarComponent = __decorate([
         core_1.Component({
             selector: 'navbar',
             templateUrl: 'app/navbar/navbar.html',
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [ng2_translate_1.TranslateService])
     ], NavbarComponent);
     return NavbarComponent;
 }());

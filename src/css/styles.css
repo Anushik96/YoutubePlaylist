@@ -5,7 +5,9 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-
+.lang{
+  margin-top: 14px;
+}
 .panel-default {
     opacity: 0.9;
     margin-top:30px;
